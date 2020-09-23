@@ -1,0 +1,12 @@
+.actStyle{
+    color: 'purple';
+    padding-top: '7px';
+    padding-right: '2px';
+    text-decoration: none; 
+}
+.inactStyle{
+    color: 'white';
+    padding-top: '7px';
+    padding-right: '2px';
+    text-decoration: none; 
+}
