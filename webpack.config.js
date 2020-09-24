@@ -39,6 +39,9 @@ module.exports = {
         }
         ]
     },
+    devServer: {
+        historyApiFallback: true
+    },
     plugins: [
         new HtmlWebPackPlugin({
             hash: true,
@@ -46,5 +49,5 @@ module.exports = {
             template: "./src/index.html" //source html
         }),
         new ExtractTextPlugin({ filename: 'css/style.css' })
-    ]
+    ],   
 }
