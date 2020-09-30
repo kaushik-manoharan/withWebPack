@@ -12,12 +12,6 @@ export default function HomePage() {
     await companiesAPI(res, setRes, frm, setFrm);
   }
   useEffect(() => {
-    console.log(
-      window.innerHeight,
-      document.documentElement.scrollTop,
-      window.innerHeight + document.documentElement.scrollTop,
-      document.documentElement.offsetHeight
-    );
     window.addEventListener("scroll", handleScroll);
 
     insideFn();
