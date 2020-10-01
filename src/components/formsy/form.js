@@ -5,6 +5,7 @@ import Formsy from "formsy-react";
 
 import React from "react";
 import Navigation from "../utils/navbar";
+import DOBComponent from "./dob";
 import MyInput from "./myInput";
 class FormsyForm extends React.Component {
   constructor(props) {
@@ -23,10 +24,7 @@ class FormsyForm extends React.Component {
   }
 
   submit(model) {
-    fetch("http://example.com/", {
-      method: "post",
-      body: JSON.stringify(model),
-    });
+    console.log(model);
   }
 
   render() {
@@ -40,6 +38,7 @@ class FormsyForm extends React.Component {
           onValid={this.enableButton}
           onInvalid={this.disableButton}
         >
+          Name:{" "}
           <MyInput
             name="name"
             validations={{
@@ -49,14 +48,16 @@ class FormsyForm extends React.Component {
             required
           />
           <br />
+          Your city:{" "}
           <MyInput
             name="location"
             validationError="This is required"
             required
           />
           <br />
+          Phone:{" "}
           <MyInput
-            name="name"
+            name="phone"
             validations={{
               isNumeric: true,
               isLength: 10,
@@ -65,6 +66,10 @@ class FormsyForm extends React.Component {
             required
           />
           <br />
+          {/* DOB - custom validation */}
+          <DOBComponent />
+          {/*  */}
+          Email:{" "}
           <MyInput
             name="email"
             validations="isEmail"
