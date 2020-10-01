@@ -1,8 +1,6 @@
 /** @format */
 
 import Formsy from "formsy-react";
-/** @format */
-
 import React from "react";
 import Navigation from "../utils/navbar";
 import DOBComponent from "./dob";

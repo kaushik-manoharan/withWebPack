@@ -16,7 +16,7 @@ export default function DOBComponent() {
             let date = new Date();
             return value > 1900 && value < date.getFullYear()
               ? true
-              : "not valid year";
+              : "invalid year";
           },
         }}
         required
@@ -26,7 +26,7 @@ export default function DOBComponent() {
         name="birthMonth"
         validations={{
           dobValidation: (values, value) => {
-            return value > 0 && value <= 12 ? true : "not valid month";
+            return value > 0 && value <= 12 ? true : "invalid month";
           },
         }}
         required
